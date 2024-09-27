@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* - Weights: 300, 600, 700 */
+    --font: "Libre Franklin", system-ui;
+    /*  Colors */
+
+    /* Primary */
+    
+    --Blue: hsl(223, 87%, 63%);
+    
+    /* Secondary */
+    
+    --Pale-Blue: hsl(223, 100%, 88%);
+    --Light-Red: hsl(354, 100%, 66%);
+    
+    /* Neutral */
+    
+    --Gray: hsl(0, 0%, 59%);
+    --Very-Dark-Blue: hsl(209, 33%, 12%);
+
+}
+
+body{
+    font-family: var(--font);
+    font-size: 20px;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    margin: 50px 0 50px 0 ;
+}
+
+.logo{
+    width: 200px;
+    height: auto;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    font-weight: 300;
+    font-size: 50px;
+    color: var(--Gray);
+    margin-bottom: 0px;
+}
+
+.title span{
+    font-weight: 700;
+    color: var(--Very-Dark-Blue);
+}
+
+.paragraph {
+    font-weight: 300;
+    color: var(--Very-Dark-Blue);
+    font-size: 20px;
+}
+
+.form{
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    position: relative;
+}
+
+input{
+    border-radius: 40px;
+}
+
+.email{
+    padding: 15px;
+    width: 500px;
+    border: 1px solid var(--Pale-Blue);
+    font-size: 20px;
+    padding-left: 30px;
+}
+
+.email::placeholder{
+    color: var(--Pale-Blue);
+    font-family: var(--font);
+    font-size: 16px;
+    padding-left: 3px;
+}
+
+input[type="submit"]{
+    padding: 15px;
+    width: 200px;
+    background: var(--Blue);
+    color: white;
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(46, 46, 237, 0.273);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover{
+    background: var(--Pale-Blue);
+}
+
+input[type="submit"]:active{
+    background: var(--Very-Dark-Blue);
+}
+
+.error{
+    position: absolute;
+    width: 90%;
+    top: 70px;
+    font-size: 15px;
+    color: var(--Light-Red);
+    font-style: italic;
+    display: none;
+    margin: 0;
+}
+
+.container-img{
+    margin-top: 100px;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+}
+
+.container-img img{
+    width: 100%;
+    height: auto;
+}
+
+.icons{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 50px 0px 50px 0px;
+    font-size: 30px;
+}
+
+.copyright{
+    font-size: 12px;
+    color: var(--Gray);
+}
+
+footer{
+    text-align: end;
+    margin-bottom: 10px;
+}
+
+.social-media i {
+    color: var(--Pale-Blue);
+    transition: color 0.3s ease;
+}
+
+.social-media:hover i {
+    color: var(--Blue);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media (max-width: 600px) {
+    body {
+        font-size: 16px; 
+    }
+
+    .container {
+        width: 90vw;
+        margin: 20px 0; 
+        padding: 0 10px;
+    }
+
+    .logo {
+        width: 150px; 
+        margin-bottom: 40px;
+    }
+
+    .title {
+        font-size: 30px;
+        margin-bottom: 10px; 
+    }
+
+    .paragraph {
+        font-size: 14px;
+    }
+
+    .form {
+        flex-direction: column; 
+        align-items: center; 
+        width: 90%;
+    }
+
+    .email {
+        width: 100%; 
+        margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+        width: 110%; 
+        padding: 20px;
+    }
+
+    .error {
+        right: 0; 
+        text-align: center; 
+    }
+
+    .container-img {
+        margin: 100px;
+        width: 100%; 
+    }
+
+    .icons {
+        font-size: 24px; 
+    }
+
+    footer{
+        margin-top: 100px;
+    }
+}
